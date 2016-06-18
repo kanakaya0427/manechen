@@ -14,6 +14,7 @@
 		D578BD791D1228030002E5BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D578BD771D1228030002E5BF /* LaunchScreen.storyboard */; };
 		D578BD841D1228040002E5BF /* manechenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D578BD831D1228040002E5BF /* manechenTests.swift */; };
 		D578BD8F1D1228040002E5BF /* manechenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D578BD8E1D1228040002E5BF /* manechenUITests.swift */; };
+		D58CB61A1D150C9B00EF2474 /* KinyuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58CB6191D150C9B00EF2474 /* KinyuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		D578BD8A1D1228040002E5BF /* manechenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = manechenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D578BD8E1D1228040002E5BF /* manechenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = manechenUITests.swift; sourceTree = "<group>"; };
 		D578BD901D1228040002E5BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D58CB6191D150C9B00EF2474 /* KinyuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KinyuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				D578BD6E1D1228030002E5BF /* AppDelegate.swift */,
+				D58CB6191D150C9B00EF2474 /* KinyuViewController.swift */,
 				D578BD701D1228030002E5BF /* ViewController.swift */,
 				D578BD721D1228030002E5BF /* Main.storyboard */,
 				D578BD751D1228030002E5BF /* Assets.xcassets */,
@@ -257,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D578BD711D1228030002E5BF /* ViewController.swift in Sources */,
+				D58CB61A1D150C9B00EF2474 /* KinyuViewController.swift in Sources */,
 				D578BD6F1D1228030002E5BF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,6 +486,7 @@
 				D578BD951D1228040002E5BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D578BD961D1228040002E5BF /* Build configuration list for PBXNativeTarget "manechenTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +495,7 @@
 				D578BD981D1228040002E5BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D578BD991D1228040002E5BF /* Build configuration list for PBXNativeTarget "manechenUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +504,7 @@
 				D578BD9B1D1228040002E5BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
