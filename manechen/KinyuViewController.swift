@@ -10,27 +10,57 @@ import UIKit
 
 class KinyuViewController: UIViewController,UITextFieldDelegate{
     
+    
+    
     @IBOutlet var yosanLabel : UILabel!
     @IBOutlet var sougakuLabel : UILabel!
     
-    private var shiyouTextField : UITextField!
-    private var dateTextField : UITextField!
+    @IBOutlet weak var shiyouTextField : UITextField!
+    
+
+    @IBOutlet weak var dateTextField: UITextField!
+    var toolBar:UIToolbar!
+    var DatePicker: UIDatePicker!
+    
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        shiyouTextField = UITextField(frame: CGRectMake(0,0,100,30))
-        shiyouTextField.layer.position = CGPoint(x:240,y:160);
-        shiyouTextField.delegate = self
+
         shiyouTextField.borderStyle = UITextBorderStyle.RoundedRect
         shiyouTextField.keyboardType = .NumberPad
         self.view.addSubview(shiyouTextField)
+        
+        toolBar = UIToolbar()
+        toolBar.sizeToFit()
+        let toolBarBtn = UIBarButtonItem(title: "完了", style: .Plain, target: self, action: #selector(KinyuViewController.doneBtn))
+        toolBar.items = [toolBarBtn]
+        dateTextField.inputAccessoryView = toolBar
+        shiyouTextField.inputAccessoryView = toolBar
+    
+    }
+    
+    @IBAction func textFieldEditing(sender: UITextField) {
+        let datePickerView:UIDatePicker = UIDatePicker()
+        datePickerView.datePickerMode = UIDatePickerMode.Date
+        sender.inputView = datePickerView
+        datePickerView.addTarget(self, action: #selector(KinyuViewController.datePickerValueChanged(_:)), forControlEvents: UIControlEvents.ValueChanged)
+    }
+    
+    func datePickerValueChanged(sender:UIDatePicker) {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat  = "yyyy/MM/dd";
+        dateTextField.text = dateFormatter.stringFromDate(sender.date)
+    }
 
+    func doneBtn(){
+        dateTextField.resignFirstResponder()
+        shiyouTextField.resignFirstResponder()
     }
     
     
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -56,8 +86,9 @@ class KinyuViewController: UIViewController,UITextFieldDelegate{
         if(shiyouTextField.isFirstResponder()){
             shiyouTextField.resignFirstResponder()
         }
-
-
+        
+        
+        
     /*
     // MARK: - Navigation
 
