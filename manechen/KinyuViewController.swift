@@ -38,22 +38,27 @@ class KinyuViewController: UIViewController,UITextFieldDelegate{
         toolBar.items = [toolBarBtn]
         dateTextField.inputAccessoryView = toolBar
         shiyouTextField.inputAccessoryView = toolBar
-    
+        
+        
     }
     
-    @IBAction func textFieldEditing(sender: UITextField) {
+    
+    func textFieldEditing(sender: UITextField) {
         let datePickerView:UIDatePicker = UIDatePicker()
         datePickerView.datePickerMode = UIDatePickerMode.Date
         sender.inputView = datePickerView
         datePickerView.addTarget(self, action: #selector(KinyuViewController.datePickerValueChanged(_:)), forControlEvents: UIControlEvents.ValueChanged)
     }
     
+
     func datePickerValueChanged(sender:UIDatePicker) {
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat  = "yyyy/MM/dd";
         dateTextField.text = dateFormatter.stringFromDate(sender.date)
     }
-
+ 
+    
+    
     func doneBtn(){
         dateTextField.resignFirstResponder()
         shiyouTextField.resignFirstResponder()
