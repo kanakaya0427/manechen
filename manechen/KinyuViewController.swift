@@ -17,14 +17,22 @@ class KinyuViewController: UIViewController,UITextFieldDelegate,UIPickerViewDele
     
     @IBOutlet weak var shiyouTextField : UITextField!
     
+    
     var toolBar:UIToolbar!
     var DatePicker: UIDatePicker!
     
     @IBOutlet var dateTextField: UITextField!
     
+    @IBOutlet weak var mySeg: UISegmentedControl!
+
+    
     @IBOutlet weak var kategoriTextField : UITextField!
 
     var pickOption = ["食費", "交通費", "衣服", "美容", "交際費","医療費"]
+    
+    var bunsekiArray: [AnyObject] = []
+    let saveData = NSUserDefaults.standardUserDefaults()
+
     
 
     
@@ -52,6 +60,11 @@ class KinyuViewController: UIViewController,UITextFieldDelegate,UIPickerViewDele
         pickerView.delegate = self
         
         kategoriTextField.inputView = pickerView
+        
+        if saveData.arrayForKey("KINGAKU") != nil{
+            bunsekiArray = saveData.arrayForKey("KINGAKU")!
+        }
+
         
     }
     
@@ -107,22 +120,48 @@ class KinyuViewController: UIViewController,UITextFieldDelegate,UIPickerViewDele
     
     @IBAction func OKButton(sender: UIButton){
         
-        // UIAlertControllerを作成する.
-        let myAlert: UIAlertController = UIAlertController(title: "", message: "記入が完了しました。", preferredStyle: .Alert)
         
-        // OKのアクションを作成する.
-        let myOkAction = UIAlertAction(title: "OK", style: .Default) { action in
-            print("Action OK!!")
-         
-        }
+        let bunsekiDictionary = ["hiduke":dateTextField.text!,"shiyou":shiyouTextField.text!,"kategori":kategoriTextField.text!,"type":["カード","現金"][mySeg.selectedSegmentIndex]]
         
         
-        // OKのActionを追加する.
-        myAlert.addAction(myOkAction)
         
-        // UIAlertを発動する.
-        presentViewController(myAlert, animated: true, completion: nil)
+        bunsekiArray.append(bunsekiDictionary)
+        saveData.setObject(bunsekiArray, forKey: "KINGAKU")
+        
+        let alert = UIAlertController(
+            title:"" ,
+            message: "記入が完了しました" ,
+            preferredStyle:  UIAlertControllerStyle.Alert)
+        alert.addAction(
+            UIAlertAction(
+                title: "OK" ,
+                style: UIAlertActionStyle.Default,
+                handler: nil
+                
+            )
+        )
+        
+        self.presentViewController(alert, animated: true, completion:nil)
+        dateTextField.text = ""
+        shiyouTextField.text = ""
+        kategoriTextField.text = ""
+        
+     
     }
+    
+
+            
+    
+        
+        
+   
+        
+      
+    
+    
+    
+    
+    
     
     
     override func didReceiveMemoryWarning() {

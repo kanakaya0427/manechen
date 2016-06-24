@@ -13,15 +13,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0A2-jn-0MD">
-                                <rect key="frame" x="91" y="195" width="138" height="74"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.95658131540000002" green="0.95658131540000002" blue="0.95658131540000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="28"/>
-                                <state key="normal" title="分析">
-                                    <color key="titleColor" red="1" green="0.55722275809999999" blue="0.67735648280000005" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="loj-KB-AAr">
                                 <rect key="frame" x="91" y="305" width="138" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -52,6 +43,18 @@
                                     <segue destination="HHj-Ke-7DM" kind="modal" id="sBq-Wa-lNF"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0A2-jn-0MD">
+                                <rect key="frame" x="91" y="207" width="138" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.95658131540000002" green="0.95658131540000002" blue="0.95658131540000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="28"/>
+                                <state key="normal" title="分析">
+                                    <color key="titleColor" red="1" green="0.55722275809999999" blue="0.67735648280000005" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="a5J-b7-Q2h" kind="modal" id="LBR-P5-X9T"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -59,7 +62,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="130" y="298"/>
+            <point key="canvasLocation" x="132" y="308"/>
         </scene>
         <!--Kinyu View Controller-->
         <scene sceneID="asI-1S-2Nv">
@@ -69,18 +72,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kFC-I1-Z2x">
-                                <rect key="frame" x="222" y="495" width="93" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.97893719697188375" blue="0.87576811871139437" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="1" green="0.7210715902" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="OK">
-                                    <color key="titleColor" red="1" green="0.55722275809999999" blue="0.67735648280000005" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="OKButton:" destination="HHj-Ke-7DM" eventType="touchUpInside" id="3Dr-zY-ByD"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="予算" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RSg-Vz-YJq">
                                 <rect key="frame" x="89" y="110" width="34" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -143,12 +134,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="aG5-6C-yzh">
-                                <rect key="frame" x="169" y="353" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="カテゴリ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yVw-nL-IZJ">
                                 <rect key="frame" x="38" y="357" width="68" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -156,6 +141,59 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="aG5-6C-yzh">
+                                <rect key="frame" x="169" y="353" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="TeS-nW-oYz">
+                                <rect key="frame" x="20" y="521" width="52" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="pen.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="NFh-tG-IwB">
+                                <rect key="frame" x="91" y="520" width="47" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="bunseki.png"/>
+                                <connections>
+                                    <segue destination="a5J-b7-Q2h" kind="modal" id="ZiZ-4c-e4q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="DaV-FK-cOy">
+                                <rect key="frame" x="172" y="518" width="45" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="calender.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hQg-jb-s32">
+                                <rect key="frame" x="254" y="518" width="54" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="setting.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kFC-I1-Z2x">
+                                <rect key="frame" x="207" y="420" width="93" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.97893719697188375" blue="0.87576811871139437" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="0.7210715902" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="OK">
+                                    <color key="titleColor" red="1" green="0.55722275809999999" blue="0.67735648280000005" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="OKButton:" destination="HHj-Ke-7DM" eventType="touchUpInside" id="3Dr-zY-ByD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="e13-8X-Ubb">
+                                <rect key="frame" x="7" y="10" width="93" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.97893719700000004" blue="0.87576811870000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="0.7210715902" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="TOP">
+                                    <color key="titleColor" red="1" green="0.55722275809999999" blue="0.67735648280000005" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="modal" id="mOv-VA-HCM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -163,6 +201,7 @@
                     <connections>
                         <outlet property="dateTextField" destination="W7e-cP-o1r" id="hwZ-ZW-Prw"/>
                         <outlet property="kategoriTextField" destination="aG5-6C-yzh" id="PTl-NG-atl"/>
+                        <outlet property="mySeg" destination="IhE-aL-Beq" id="Xtb-4o-I10"/>
                         <outlet property="shiyouTextField" destination="h90-e7-CbM" id="RUr-5g-dLZ"/>
                         <outlet property="sougakuLabel" destination="Dud-aE-bu0" id="GHF-H9-jkh"/>
                         <outlet property="yosanLabel" destination="AGq-cw-zCG" id="LGg-0t-a3B"/>
@@ -172,20 +211,20 @@
             </objects>
             <point key="canvasLocation" x="532" y="298"/>
         </scene>
-        <!--Bunseki Table View Controller-->
+        <!--Title-->
         <scene sceneID="YuX-c5-FOY">
             <objects>
                 <tableViewController id="a5J-b7-Q2h" customClass="bunsekiTableViewController" customModule="manechen" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="mNk-OD-Qnz">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="45" sectionHeaderHeight="28" sectionFooterHeight="28" id="mNk-OD-Qnz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="HtL-eM-QDo">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="45" id="HtL-eM-QDo">
+                                <rect key="frame" x="0.0" y="28" width="320" height="45"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HtL-eM-QDo" id="xOH-Ud-8f0">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -195,11 +234,20 @@
                             <outlet property="delegate" destination="a5J-b7-Q2h" id="eAW-vx-F7p"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="3B0-1W-rzO"/>
+                    <navigationItem key="navigationItem" title="Title" id="VT5-z4-uxY"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fyl-jr-r3U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="917" y="298"/>
+            <point key="canvasLocation" x="1017" y="552"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bunseki.png" width="500" height="500"/>
+        <image name="calender.png" width="600" height="586"/>
+        <image name="pen.png" width="425" height="357"/>
+        <image name="setting.png" width="300" height="300"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ZiZ-4c-e4q"/>
+    </inferredMetricsTieBreakers>
 </document>

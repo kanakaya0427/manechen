@@ -9,15 +9,24 @@
 import UIKit
 
 class bunsekiTableViewController: UITableViewController {
+    
+    var sougakuArray: [AnyObject] = []
+    let saveData = NSUserDefaults.standardUserDefaults()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.leftBarButtonItem = editButtonItem()
+        
+        tableView.registerNib(UINib(nibName: "bunsekiTableViewCell", bundle: nil),forCellReuseIdentifier:"cell")
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        print(saveData.arrayForKey("KINGAKU"))
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,36 +38,49 @@ class bunsekiTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return (saveData.arrayForKey("KINGAKU")?.count ) ?? 0
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as!bunsekiTableViewCell
 
+      
+        var data = saveData.arrayForKey("KINGAKU")
+   
+       
+        
+        cell.dateLabel.text = data![indexPath.row]["hiduke"] as? String
+        cell.shiyouLabel.text = data![indexPath.row]["shiyou"] as? String
+        cell.kategoriLabel.text = data![indexPath.row]["kategori"] as? String
+        cell.typeLabel.text = data![indexPath.row]["type"]as? String
+
+        
         // Configure the cell...
 
         return cell
     }
-    */
+    
 
-    /*
+    
     // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+  /*  override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
+ */
 
-    /*
+    
     // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
+   /* override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+         cell.removeObjectAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
             // Delete the row from the data source
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         } else if editingStyle == .Insert {
