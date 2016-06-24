@@ -8,7 +8,7 @@
 
 import UIKit
 
-class KinyuViewController: UIViewController,UITextFieldDelegate{
+class KinyuViewController: UIViewController,UITextFieldDelegate,UIPickerViewDelegate{
     
     
     
@@ -17,11 +17,16 @@ class KinyuViewController: UIViewController,UITextFieldDelegate{
     
     @IBOutlet weak var shiyouTextField : UITextField!
     
-
-    @IBOutlet weak var dateTextField: UITextField!
     var toolBar:UIToolbar!
     var DatePicker: UIDatePicker!
     
+    @IBOutlet var dateTextField: UITextField!
+    
+    @IBOutlet weak var kategoriTextField : UITextField!
+
+    var pickOption = ["食費", "交通費", "衣服", "美容", "交際費","医療費"]
+    
+
     
     
     
@@ -38,9 +43,37 @@ class KinyuViewController: UIViewController,UITextFieldDelegate{
         toolBar.items = [toolBarBtn]
         dateTextField.inputAccessoryView = toolBar
         shiyouTextField.inputAccessoryView = toolBar
+        kategoriTextField.inputAccessoryView = toolBar
+     
+         textFieldEditing(dateTextField)
         
+        let pickerView = UIPickerView()
+        
+        pickerView.delegate = self
+        
+        kategoriTextField.inputView = pickerView
         
     }
+    
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickOption.count
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickOption[row]
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        kategoriTextField.text = pickOption[row]
+    }
+
+ 
+
+     
     
     
     func textFieldEditing(sender: UITextField) {
@@ -48,22 +81,48 @@ class KinyuViewController: UIViewController,UITextFieldDelegate{
         datePickerView.datePickerMode = UIDatePickerMode.Date
         sender.inputView = datePickerView
         datePickerView.addTarget(self, action: #selector(KinyuViewController.datePickerValueChanged(_:)), forControlEvents: UIControlEvents.ValueChanged)
+        
     }
-    
+   
+   
 
     func datePickerValueChanged(sender:UIDatePicker) {
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat  = "yyyy/MM/dd";
         dateTextField.text = dateFormatter.stringFromDate(sender.date)
     }
+
+   
+
  
+
     
     
     func doneBtn(){
         dateTextField.resignFirstResponder()
         shiyouTextField.resignFirstResponder()
+        kategoriTextField.resignFirstResponder()
     }
     
+    
+    @IBAction func OKButton(sender: UIButton){
+        
+        // UIAlertControllerを作成する.
+        let myAlert: UIAlertController = UIAlertController(title: "", message: "記入が完了しました。", preferredStyle: .Alert)
+        
+        // OKのアクションを作成する.
+        let myOkAction = UIAlertAction(title: "OK", style: .Default) { action in
+            print("Action OK!!")
+         
+        }
+        
+        
+        // OKのActionを追加する.
+        myAlert.addAction(myOkAction)
+        
+        // UIAlertを発動する.
+        presentViewController(myAlert, animated: true, completion: nil)
+    }
     
     
     override func didReceiveMemoryWarning() {
