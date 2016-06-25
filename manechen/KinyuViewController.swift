@@ -34,7 +34,10 @@ class KinyuViewController: UIViewController,UITextFieldDelegate,UIPickerViewDele
     let saveData = NSUserDefaults.standardUserDefaults()
 
     
-
+    var sendText:String = ""
+    
+    
+    
     
     
     
@@ -64,8 +67,10 @@ class KinyuViewController: UIViewController,UITextFieldDelegate,UIPickerViewDele
         if saveData.arrayForKey("KINGAKU") != nil{
             bunsekiArray = saveData.arrayForKey("KINGAKU")!
         }
-
         
+        sougakuLabel.text = ""
+            
+        yosanLabel.text = sendText
     }
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {

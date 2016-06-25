@@ -14,6 +14,7 @@
 		D578BD791D1228030002E5BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D578BD771D1228030002E5BF /* LaunchScreen.storyboard */; };
 		D578BD841D1228040002E5BF /* manechenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D578BD831D1228040002E5BF /* manechenTests.swift */; };
 		D578BD8F1D1228040002E5BF /* manechenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D578BD8E1D1228040002E5BF /* manechenUITests.swift */; };
+		D584DE221D1E241800748701 /* SetteiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D584DE211D1E241800748701 /* SetteiViewController.swift */; };
 		D58CB61A1D150C9B00EF2474 /* KinyuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58CB6191D150C9B00EF2474 /* KinyuViewController.swift */; };
 		D5C4F3141D1D0AEF0082D5F6 /* bunseki.png in Resources */ = {isa = PBXBuildFile; fileRef = D5C4F3101D1D0AEF0082D5F6 /* bunseki.png */; };
 		D5C4F3151D1D0AEF0082D5F6 /* calender.png in Resources */ = {isa = PBXBuildFile; fileRef = D5C4F3111D1D0AEF0082D5F6 /* calender.png */; };
@@ -55,6 +56,7 @@
 		D578BD8A1D1228040002E5BF /* manechenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = manechenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D578BD8E1D1228040002E5BF /* manechenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = manechenUITests.swift; sourceTree = "<group>"; };
 		D578BD901D1228040002E5BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D584DE211D1E241800748701 /* SetteiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetteiViewController.swift; sourceTree = "<group>"; };
 		D58CB6191D150C9B00EF2474 /* KinyuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KinyuViewController.swift; sourceTree = "<group>"; };
 		D5C4F3101D1D0AEF0082D5F6 /* bunseki.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bunseki.png; sourceTree = "<group>"; };
 		D5C4F3111D1D0AEF0082D5F6 /* calender.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calender.png; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				D5C4F3121D1D0AEF0082D5F6 /* pen.png */,
 				D5C4F3131D1D0AEF0082D5F6 /* setting.png */,
 				D578BD6E1D1228030002E5BF /* AppDelegate.swift */,
+				D584DE211D1E241800748701 /* SetteiViewController.swift */,
 				D5C4F3241D1D15060082D5F6 /* bunsekiTableViewController.swift */,
 				D5C4F3201D1D14770082D5F6 /* bunsekiTableViewCell.swift */,
 				D5C4F3211D1D14770082D5F6 /* bunsekiTableViewCell.xib */,
@@ -287,6 +290,7 @@
 			files = (
 				D578BD711D1228030002E5BF /* ViewController.swift in Sources */,
 				D5C4F3251D1D15060082D5F6 /* bunsekiTableViewController.swift in Sources */,
+				D584DE221D1E241800748701 /* SetteiViewController.swift in Sources */,
 				D5C4F3221D1D14770082D5F6 /* bunsekiTableViewCell.swift in Sources */,
 				D58CB61A1D150C9B00EF2474 /* KinyuViewController.swift in Sources */,
 				D578BD6F1D1228030002E5BF /* AppDelegate.swift in Sources */,
