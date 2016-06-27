@@ -37,18 +37,18 @@ class SetteiViewController: UIViewController,UITextFieldDelegate {
         // Do any additional setup after loading the view.
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        if segue.identifier == "SecondView" {
-            
-            let secondViewController:KinyuViewController = segue.destinationViewController as! KinyuViewController
-            
-
-              secondViewController.sendText = self.yosanTextField.text!
-        }
-        
-        
-    }
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        
+//        if segue.identifier == "SecondView" {
+//            
+//            let secondViewController:KinyuViewController = segue.destinationViewController as! KinyuViewController
+//            
+//
+//              secondViewController.sendText = self.yosanTextField.text!
+//        }
+//        
+//        
+//    }
     
     
     func doneBtn(){
@@ -57,6 +57,12 @@ class SetteiViewController: UIViewController,UITextFieldDelegate {
     
     @IBAction func OKButton(sender: UIButton){
 
+        if let text = yosanTextField.text, yosan = Int(text) {
+             NSUserDefaults.standardUserDefaults().setInteger(yosan, forKey: "yosan")
+             NSUserDefaults.standardUserDefaults().synchronize()
+        }
+       
+        
         
         let alert = UIAlertController(
             title:"" ,

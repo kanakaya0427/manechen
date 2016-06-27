@@ -68,9 +68,20 @@ class KinyuViewController: UIViewController,UITextFieldDelegate,UIPickerViewDele
             bunsekiArray = saveData.arrayForKey("KINGAKU")!
         }
         
-        sougakuLabel.text = ""
-            
-        yosanLabel.text = sendText
+        
+        
+        let yosan = NSUserDefaults.standardUserDefaults().integerForKey("yosan")
+        yosanLabel.text = "\(yosan)"
+        
+        let sougaku = NSUserDefaults.standardUserDefaults().integerForKey("sougaku")
+        sougakuLabel.text = "\(sougaku)"
+        
+        if sougaku >= yosan{
+            sougakuLabel.textColor = UIColor.redColor()
+        }else if sougaku < yosan{
+            sougakuLabel.textColor = UIColor.blackColor()
+        }
+
     }
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
@@ -125,6 +136,11 @@ class KinyuViewController: UIViewController,UITextFieldDelegate,UIPickerViewDele
     
     @IBAction func OKButton(sender: UIButton){
         
+//        
+//        if let text = shiyouTextField.text, shiyou = Int(text) {
+//            NSUserDefaults.standardUserDefaults().setInteger(shiyou), forKey: "shiyou")
+//            NSUserDefaults.standardUserDefaults().synchronize()
+        
         
         let bunsekiDictionary = ["hiduke":dateTextField.text!,"shiyou":shiyouTextField.text!,"kategori":kategoriTextField.text!,"type":["カード","現金"][mySeg.selectedSegmentIndex]]
         
@@ -146,22 +162,31 @@ class KinyuViewController: UIViewController,UITextFieldDelegate,UIPickerViewDele
             )
         )
         
+        var sum = 0
+        for item in bunsekiArray {
+            let money = Int(item["shiyou"] as! String)!
+            sum += money
+        }
+        print(sum)
+        
+        sougakuLabel.text = "\(sum)"
+        
+        NSUserDefaults.standardUserDefaults().setInteger(sum, forKey: "sougaku")
+        NSUserDefaults.standardUserDefaults().synchronize()
+        
+       
+        
         self.presentViewController(alert, animated: true, completion:nil)
         dateTextField.text = ""
         shiyouTextField.text = ""
         kategoriTextField.text = ""
         
+        
+        
      
     }
     
 
-            
-    
-        
-        
-   
-        
-      
     
     
     
