@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7EE14732E37835414209885A /* Pods_manechen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96C548FED475F671FCEB9DD1 /* Pods_manechen.framework */; };
+		B6AC9ADFCC056928AD3D3411 /* Pods_manechenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21DC99688592A0456663F813 /* Pods_manechenTests.framework */; };
 		D578BD6F1D1228030002E5BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D578BD6E1D1228030002E5BF /* AppDelegate.swift */; };
 		D578BD711D1228030002E5BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D578BD701D1228030002E5BF /* ViewController.swift */; };
 		D578BD741D1228030002E5BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D578BD721D1228030002E5BF /* Main.storyboard */; };
@@ -15,6 +17,7 @@
 		D578BD841D1228040002E5BF /* manechenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D578BD831D1228040002E5BF /* manechenTests.swift */; };
 		D578BD8F1D1228040002E5BF /* manechenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D578BD8E1D1228040002E5BF /* manechenUITests.swift */; };
 		D584DE221D1E241800748701 /* SetteiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D584DE211D1E241800748701 /* SetteiViewController.swift */; };
+		D584DE261D21003A00748701 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D584DE251D21003A00748701 /* GraphViewController.swift */; };
 		D58CB61A1D150C9B00EF2474 /* KinyuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58CB6191D150C9B00EF2474 /* KinyuViewController.swift */; };
 		D5C4F3141D1D0AEF0082D5F6 /* bunseki.png in Resources */ = {isa = PBXBuildFile; fileRef = D5C4F3101D1D0AEF0082D5F6 /* bunseki.png */; };
 		D5C4F3151D1D0AEF0082D5F6 /* calender.png in Resources */ = {isa = PBXBuildFile; fileRef = D5C4F3111D1D0AEF0082D5F6 /* calender.png */; };
@@ -23,6 +26,7 @@
 		D5C4F3221D1D14770082D5F6 /* bunsekiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C4F3201D1D14770082D5F6 /* bunsekiTableViewCell.swift */; };
 		D5C4F3231D1D14770082D5F6 /* bunsekiTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5C4F3211D1D14770082D5F6 /* bunsekiTableViewCell.xib */; };
 		D5C4F3251D1D15060082D5F6 /* bunsekiTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C4F3241D1D15060082D5F6 /* bunsekiTableViewController.swift */; };
+		E2609A264E6A0BB12703990A /* Pods_manechenUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B58923CCD7B5545E1EC71A62 /* Pods_manechenUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +47,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0057018766AF70D26DAC8D0B /* Pods-manechenUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-manechenUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-manechenUITests/Pods-manechenUITests.release.xcconfig"; sourceTree = "<group>"; };
+		12EF2FD116D1FCBE7A94366F /* Pods-manechen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-manechen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-manechen/Pods-manechen.debug.xcconfig"; sourceTree = "<group>"; };
+		21DC99688592A0456663F813 /* Pods_manechenTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_manechenTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		26ABEFEB01E96BBFBCC7DEFF /* Pods-manechenUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-manechenUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-manechenUITests/Pods-manechenUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		309F204BF406EADDF27E221F /* Pods-manechenTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-manechenTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-manechenTests/Pods-manechenTests.release.xcconfig"; sourceTree = "<group>"; };
+		5158DD304C54463A93E848FC /* Pods-manechenTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-manechenTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-manechenTests/Pods-manechenTests.debug.xcconfig"; sourceTree = "<group>"; };
+		96C548FED475F671FCEB9DD1 /* Pods_manechen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_manechen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B58923CCD7B5545E1EC71A62 /* Pods_manechenUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_manechenUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D578BD6B1D1228030002E5BF /* manechen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = manechen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D578BD6E1D1228030002E5BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D578BD701D1228030002E5BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +69,7 @@
 		D578BD8E1D1228040002E5BF /* manechenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = manechenUITests.swift; sourceTree = "<group>"; };
 		D578BD901D1228040002E5BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D584DE211D1E241800748701 /* SetteiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetteiViewController.swift; sourceTree = "<group>"; };
+		D584DE251D21003A00748701 /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		D58CB6191D150C9B00EF2474 /* KinyuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KinyuViewController.swift; sourceTree = "<group>"; };
 		D5C4F3101D1D0AEF0082D5F6 /* bunseki.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bunseki.png; sourceTree = "<group>"; };
 		D5C4F3111D1D0AEF0082D5F6 /* calender.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calender.png; sourceTree = "<group>"; };
@@ -65,6 +78,7 @@
 		D5C4F3201D1D14770082D5F6 /* bunsekiTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bunsekiTableViewCell.swift; sourceTree = "<group>"; };
 		D5C4F3211D1D14770082D5F6 /* bunsekiTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = bunsekiTableViewCell.xib; sourceTree = "<group>"; };
 		D5C4F3241D1D15060082D5F6 /* bunsekiTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bunsekiTableViewController.swift; sourceTree = "<group>"; };
+		E54992E48A3C4B901B6EE246 /* Pods-manechen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-manechen.release.xcconfig"; path = "Pods/Target Support Files/Pods-manechen/Pods-manechen.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EE14732E37835414209885A /* Pods_manechen.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6AC9ADFCC056928AD3D3411 /* Pods_manechenTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,12 +102,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2609A264E6A0BB12703990A /* Pods_manechenUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A86443CE5F4B56F979DFBF8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				12EF2FD116D1FCBE7A94366F /* Pods-manechen.debug.xcconfig */,
+				E54992E48A3C4B901B6EE246 /* Pods-manechen.release.xcconfig */,
+				5158DD304C54463A93E848FC /* Pods-manechenTests.debug.xcconfig */,
+				309F204BF406EADDF27E221F /* Pods-manechenTests.release.xcconfig */,
+				26ABEFEB01E96BBFBCC7DEFF /* Pods-manechenUITests.debug.xcconfig */,
+				0057018766AF70D26DAC8D0B /* Pods-manechenUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D578BD621D1228030002E5BF = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +129,8 @@
 				D578BD821D1228040002E5BF /* manechenTests */,
 				D578BD8D1D1228040002E5BF /* manechenUITests */,
 				D578BD6C1D1228030002E5BF /* Products */,
+				9A86443CE5F4B56F979DFBF8 /* Pods */,
+				FB33B46F149A2757D5BF45D3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,6 +152,7 @@
 				D5C4F3121D1D0AEF0082D5F6 /* pen.png */,
 				D5C4F3131D1D0AEF0082D5F6 /* setting.png */,
 				D578BD6E1D1228030002E5BF /* AppDelegate.swift */,
+				D584DE251D21003A00748701 /* GraphViewController.swift */,
 				D584DE211D1E241800748701 /* SetteiViewController.swift */,
 				D5C4F3241D1D15060082D5F6 /* bunsekiTableViewController.swift */,
 				D5C4F3201D1D14770082D5F6 /* bunsekiTableViewCell.swift */,
@@ -152,6 +185,16 @@
 			path = manechenUITests;
 			sourceTree = "<group>";
 		};
+		FB33B46F149A2757D5BF45D3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				96C548FED475F671FCEB9DD1 /* Pods_manechen.framework */,
+				21DC99688592A0456663F813 /* Pods_manechenTests.framework */,
+				B58923CCD7B5545E1EC71A62 /* Pods_manechenUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -159,9 +202,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D578BD931D1228040002E5BF /* Build configuration list for PBXNativeTarget "manechen" */;
 			buildPhases = (
+				D5ABC7A8B57334CA80AA2AC9 /* [CP] Check Pods Manifest.lock */,
 				D578BD671D1228030002E5BF /* Sources */,
 				D578BD681D1228030002E5BF /* Frameworks */,
 				D578BD691D1228030002E5BF /* Resources */,
+				F2FE9A25196AB622B4A70BDC /* [CP] Embed Pods Frameworks */,
+				18F394E9FD22FD52A9AE88A0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -176,9 +222,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D578BD961D1228040002E5BF /* Build configuration list for PBXNativeTarget "manechenTests" */;
 			buildPhases = (
+				5DC9D255E948744E47A4BCA6 /* [CP] Check Pods Manifest.lock */,
 				D578BD7B1D1228040002E5BF /* Sources */,
 				D578BD7C1D1228040002E5BF /* Frameworks */,
 				D578BD7D1D1228040002E5BF /* Resources */,
+				9EF98F0AF6BC8282028752AB /* [CP] Embed Pods Frameworks */,
+				1ED31A86C1FE137DEB2D80F7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -194,9 +243,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D578BD991D1228040002E5BF /* Build configuration list for PBXNativeTarget "manechenUITests" */;
 			buildPhases = (
+				53A3E2E842D87E6C8F7BA6A8 /* [CP] Check Pods Manifest.lock */,
 				D578BD861D1228040002E5BF /* Sources */,
 				D578BD871D1228040002E5BF /* Frameworks */,
 				D578BD881D1228040002E5BF /* Resources */,
+				C7E5C57CAD1EFFD60DC58CA6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -283,6 +334,129 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		18F394E9FD22FD52A9AE88A0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-manechen/Pods-manechen-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1ED31A86C1FE137DEB2D80F7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-manechenTests/Pods-manechenTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		53A3E2E842D87E6C8F7BA6A8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5DC9D255E948744E47A4BCA6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9EF98F0AF6BC8282028752AB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-manechenTests/Pods-manechenTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7E5C57CAD1EFFD60DC58CA6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-manechenUITests/Pods-manechenUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5ABC7A8B57334CA80AA2AC9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F2FE9A25196AB622B4A70BDC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-manechen/Pods-manechen-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D578BD671D1228030002E5BF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -290,6 +464,7 @@
 			files = (
 				D578BD711D1228030002E5BF /* ViewController.swift in Sources */,
 				D5C4F3251D1D15060082D5F6 /* bunsekiTableViewController.swift in Sources */,
+				D584DE261D21003A00748701 /* GraphViewController.swift in Sources */,
 				D584DE221D1E241800748701 /* SetteiViewController.swift in Sources */,
 				D5C4F3221D1D14770082D5F6 /* bunsekiTableViewCell.swift in Sources */,
 				D58CB61A1D150C9B00EF2474 /* KinyuViewController.swift in Sources */,
@@ -433,6 +608,7 @@
 		};
 		D578BD941D1228040002E5BF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12EF2FD116D1FCBE7A94366F /* Pods-manechen.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -448,6 +624,7 @@
 		};
 		D578BD951D1228040002E5BF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E54992E48A3C4B901B6EE246 /* Pods-manechen.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -463,6 +640,7 @@
 		};
 		D578BD971D1228040002E5BF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5158DD304C54463A93E848FC /* Pods-manechenTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = manechenTests/Info.plist;
@@ -475,6 +653,7 @@
 		};
 		D578BD981D1228040002E5BF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 309F204BF406EADDF27E221F /* Pods-manechenTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = manechenTests/Info.plist;
@@ -487,6 +666,7 @@
 		};
 		D578BD9A1D1228040002E5BF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26ABEFEB01E96BBFBCC7DEFF /* Pods-manechenUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = manechenUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -498,6 +678,7 @@
 		};
 		D578BD9B1D1228040002E5BF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0057018766AF70D26DAC8D0B /* Pods-manechenUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = manechenUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

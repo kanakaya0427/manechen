@@ -21,6 +21,9 @@
                                 <state key="normal" title="分析">
                                     <color key="titleColor" red="1" green="0.55722275809999999" blue="0.67735648280000005" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="JXY-o9-Uop" kind="modal" id="La3-31-ag9"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XNR-Uy-mLJ">
                                 <rect key="frame" x="91" y="408" width="138" height="74"/>
@@ -188,18 +191,6 @@
                                     <action selector="OKButton:" destination="HHj-Ke-7DM" eventType="touchUpInside" id="3Dr-zY-ByD"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="e13-8X-Ubb">
-                                <rect key="frame" x="7" y="20" width="93" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.97893719700000004" blue="0.87576811870000004" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="1" green="0.7210715902" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="TOP">
-                                    <color key="titleColor" red="1" green="0.55722275809999999" blue="0.67735648280000005" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="modal" id="mOv-VA-HCM"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ozn-xh-eAP">
                                 <rect key="frame" x="130" y="144" width="17" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -214,6 +205,18 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="e13-8X-Ubb">
+                                <rect key="frame" x="7" y="20" width="93" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.97893719700000004" blue="0.87576811870000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="0.7210715902" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="TOP">
+                                    <color key="titleColor" red="1" green="0.55722275809999999" blue="0.67735648280000005" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="modal" id="mOv-VA-HCM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -231,6 +234,42 @@
             </objects>
             <point key="canvasLocation" x="532" y="298"/>
         </scene>
+        <!--Graph View Controller-->
+        <scene sceneID="suS-lQ-9Sm">
+            <objects>
+                <viewController id="JXY-o9-Uop" customClass="GraphViewController" customModule="manechen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RaO-Sw-9U5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Eh6-ar-HjG">
+                                <rect key="frame" x="20" y="34" width="93" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.97893719700000004" blue="0.87576811870000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="0.7210715902" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="TOP">
+                                    <color key="titleColor" red="1" green="0.55722275809999999" blue="0.67735648280000005" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="modal" id="VZ5-na-Vr4"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" id="gqR-4x-K0c" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="15" y="90" width="291" height="440"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="pieChartView" destination="gqR-4x-K0c" id="mbF-Zk-Sdv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="emx-pa-6NO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="502" y="-306"/>
+        </scene>
         <!--一覧-->
         <scene sceneID="YuX-c5-FOY">
             <objects>
@@ -241,7 +280,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="70" id="pW3-1E-HYS">
-                                <rect key="frame" x="0.0" y="92" width="320" height="70"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pW3-1E-HYS" id="o5a-Wu-gLm">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="69.5"/>
@@ -279,7 +318,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="gZC-8I-agM">
-                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gZC-8I-agM" id="Jxc-0Q-jwl">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -404,8 +443,8 @@
         <image name="setting.png" width="300" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="LBR-P5-X9T"/>
-        <segue reference="Rhk-NS-BGJ"/>
-        <segue reference="o9W-nt-gIX"/>
+        <segue reference="VZ5-na-Vr4"/>
+        <segue reference="ZiZ-4c-e4q"/>
+        <segue reference="gtk-dv-3Nr"/>
     </inferredMetricsTieBreakers>
 </document>

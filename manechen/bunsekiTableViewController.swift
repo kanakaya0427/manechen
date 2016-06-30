@@ -12,6 +12,9 @@ class bunsekiTableViewController: UITableViewController {
     
     var sougakuArray: [AnyObject] = []
     let saveData = NSUserDefaults.standardUserDefaults()
+    
+    
+    
 
 
     override func viewDidLoad() {
@@ -30,7 +33,9 @@ class bunsekiTableViewController: UITableViewController {
         self.tableView.estimatedRowHeight = 44
         self.tableView.rowHeight = UITableViewAutomaticDimension
         
-   
+       
+        saveData.setObject(sougakuArray, forKey:"SOUGAKU")
+  
     }
 
     override func didReceiveMemoryWarning() {
@@ -56,7 +61,7 @@ class bunsekiTableViewController: UITableViewController {
 
       
         var data = saveData.arrayForKey("KINGAKU")
-   
+        
        
         
         cell.dateLabel.text = data![indexPath.row]["hiduke"] as? String
@@ -86,12 +91,24 @@ class bunsekiTableViewController: UITableViewController {
     
     // Override to support editing the table view.
    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-    
-        sougakuArray.removeAtIndex(indexPath.row)
+    if editingStyle == UITableViewCellEditingStyle.Delete{
+
+        
+        saveData.setObject(sougakuArray, forKey: "KINGAKU")
+
+//            saveData.objectForKey("SOUGAKU") as? NSArray
+//            sougakuArray = saveData.arrayForKey("SOUGAKU")!
+        
+            sougakuArray.removeAtIndex(indexPath.row)
         
         // それからテーブルの更新
         tableView.deleteRowsAtIndexPaths([NSIndexPath(forRow: indexPath.row, inSection: 0)],
-                                         withRowAnimation: UITableViewRowAnimation.Fade)    }
+                                         withRowAnimation: UITableViewRowAnimation.Fade)
+        
+    
+    }
+    
+    }
 
     /*
     // Override to support rearranging the table view.

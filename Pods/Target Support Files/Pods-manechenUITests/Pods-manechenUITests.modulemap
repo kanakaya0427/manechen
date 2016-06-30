@@ -1,0 +1,6 @@
+framework module Pods_manechenUITests {
+  umbrella header "Pods-manechenUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
