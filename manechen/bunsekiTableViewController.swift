@@ -94,10 +94,7 @@ class bunsekiTableViewController: UITableViewController {
     if editingStyle == UITableViewCellEditingStyle.Delete{
 
         
-        saveData.setObject(sougakuArray, forKey: "KINGAKU")
-
-//            saveData.objectForKey("SOUGAKU") as? NSArray
-//            sougakuArray = saveData.arrayForKey("SOUGAKU")!
+         saveData.setObject(sougakuArray, forKey:"SOUGAKU")
         
             sougakuArray.removeAtIndex(indexPath.row)
         

@@ -33,10 +33,10 @@ class GraphViewController: UIViewController {
             
             let kategori = NSUserDefaults.standardUserDefaults()
             
-            kategori.setObject("KATEGORI", forKey: "SOUGAKU")
+            kategori.setObject("kategori", forKey: "SOUGAKU")
             
              //円グラフに表示するデータ
-            var dataEntries = [kategori]
+            var dataEntries = ["kategori"]
 
             
             for index in (1...4).reverse() {
