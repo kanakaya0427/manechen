@@ -14,20 +14,29 @@ class GraphViewController: UIViewController {
     
     @IBOutlet weak var pieChartView: PieChartView!
     
-    var bunsekiArray: [AnyObject] = []
-   
-    var Kategori = NSUserDefaults.standardUserDefaults().integerForKey("kategori")
+
+    let saveData = NSUserDefaults.standardUserDefaults()
+    var sougakuArray: [AnyObject] = []
+
     
 
-    override func viewDidLoad() {
+    override func viewDidLoad(){
         super.viewDidLoad()
+        
+        print(saveData.arrayForKey("KINGAKU"))
+        
+        saveData.setObject(sougakuArray, forKey:"SOUGAKU")
         
          func setupPieChartView() {
             self.pieChartView.usePercentValuesEnabled = true
             self.pieChartView.descriptionText = "カテゴリ別の使用割合"
             
-            // 円グラフに表示するデータ
-            var dataEntries = [Kategori]
+            let kategori = NSUserDefaults.standardUserDefaults()
+            
+            kategori.setObject("KATEGORI", forKey: "SOUGAKU")
+            
+             //円グラフに表示するデータ
+            var dataEntries = [kategori]
 
             
             for index in (1...4).reverse() {
@@ -37,7 +46,7 @@ class GraphViewController: UIViewController {
             dataSet.colors = ChartColorTemplates.colorful()
             let data = ChartData(xVals: ["食費", "交通費", "衣服", "美容", "交際費","医療費"], dataSet: dataSet)
             
-            // %表示
+             %表示
             let numberFormatter = NSNumberFormatter()
             numberFormatter.numberStyle = NSNumberFormatterStyle.PercentStyle;
             numberFormatter.maximumFractionDigits = 1;
