@@ -64,8 +64,8 @@ class KinyuViewController: UIViewController,UITextFieldDelegate,UIPickerViewDele
         
         kategoriTextField.inputView = pickerView
         
-        if saveData.arrayForKey("KINGAKU") != nil{
-            bunsekiArray = saveData.arrayForKey("KINGAKU")!
+        if saveData.arrayForKey("SOUGAKU") != nil{
+            bunsekiArray = saveData.arrayForKey("SOUGAKU")!
         }
         
         
@@ -147,7 +147,7 @@ class KinyuViewController: UIViewController,UITextFieldDelegate,UIPickerViewDele
         
         
         bunsekiArray.append(bunsekiDictionary)
-        saveData.setObject(bunsekiArray, forKey: "KINGAKU")
+        saveData.setObject(bunsekiArray, forKey: "SOUGAKU")
         
         let alert = UIAlertController(
             title:"" ,

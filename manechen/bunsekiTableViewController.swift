@@ -14,7 +14,7 @@ class bunsekiTableViewController: UITableViewController {
     let saveData = NSUserDefaults.standardUserDefaults()
     
     
-    
+    var index = 0
 
 
     override func viewDidLoad() {
@@ -29,13 +29,27 @@ class bunsekiTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        print(saveData.arrayForKey("KINGAKU"))
+        if saveData.arrayForKey("SOUGAKU") != nil {
+            sougakuArray = saveData.arrayForKey("SOUGAKU")!
+        }
+        
+        print(saveData.arrayForKey("SOUGAKU"))
         self.tableView.estimatedRowHeight = 44
         self.tableView.rowHeight = UITableViewAutomaticDimension
         
        
         saveData.setObject(sougakuArray, forKey:"SOUGAKU")
+      
   
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        if saveData.arrayForKey("SOUGAKU") != nil{
+            sougakuArray = saveData.arrayForKey("SOUGAKU")!
+        }
+        tableView.reloadData()
+        //        listTable.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,7 +66,7 @@ class bunsekiTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return (saveData.arrayForKey("KINGAKU")?.count ) ?? 0
+        return (saveData.arrayForKey("SOUGAKU")?.count ) ?? 0
     }
 
     
@@ -60,7 +74,7 @@ class bunsekiTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as!bunsekiTableViewCell
 
       
-        var data = saveData.arrayForKey("KINGAKU")
+        var data = saveData.arrayForKey("SOUGAKU")
         
        
         
@@ -87,23 +101,22 @@ class bunsekiTableViewController: UITableViewController {
         return true
     }
  
+    
+
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.index = indexPath.row
+        self.performSegueWithIdentifier("toSubView", sender: nil)
+    }
 
     
     // Override to support editing the table view.
-   override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-    if editingStyle == UITableViewCellEditingStyle.Delete{
-
-        
-         saveData.setObject(sougakuArray, forKey:"SOUGAKU")
-        
-            sougakuArray.removeAtIndex(indexPath.row)
-        
-        // それからテーブルの更新
-        tableView.deleteRowsAtIndexPaths([NSIndexPath(forRow: indexPath.row, inSection: 0)],
-                                         withRowAnimation: UITableViewRowAnimation.Fade)
-        
-    
-    }
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.Delete{
+        sougakuArray.removeAtIndex(indexPath.row)
+//        tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+        saveData.setObject(sougakuArray, forKey: "SOUGAKU")
+        tableView.reloadData()    }
     
     }
 
@@ -126,7 +139,7 @@ class bunsekiTableViewController: UITableViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+      override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
