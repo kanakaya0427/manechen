@@ -31,22 +31,25 @@ class GraphViewController: UIViewController {
             self.pieChartView.usePercentValuesEnabled = true
             self.pieChartView.descriptionText = "カテゴリ別の使用割合"
             
-            let kategori = NSUserDefaults.standardUserDefaults()
-            
-            kategori.setObject("kategori", forKey: "SOUGAKU")
+            let kategori = NSUserDefaults.standardUserDefaults().integerForKey("kategori")
             
              //円グラフに表示するデータ
-            var dataEntries = ["kategori"]
+            
+            var sum = 0
+            for item in kategori {
+                let sougaku = Int(item["kategori"] as! String)!
+                sum += money
+            }
+            print(sum)
 
             
             for index in (1...4).reverse() {
-                dataEntries.append(ChartDataEntry(value: Double(index) * 10.0, xIndex: index))
+                kategori.append(ChartDataEntry(value: Double(index) * 10.0, xIndex: index))
             }
-            let dataSet = PieChartDataSet(yVals:dataEntries, label: "カテゴリ名")
+            let dataSet = PieChartDataSet(yVals:kategori, label: "カテゴリ名")
             dataSet.colors = ChartColorTemplates.colorful()
             let data = ChartData(xVals: ["食費", "交通費", "衣服", "美容", "交際費","医療費"], dataSet: dataSet)
             
-             %表示
             let numberFormatter = NSNumberFormatter()
             numberFormatter.numberStyle = NSNumberFormatterStyle.PercentStyle;
             numberFormatter.maximumFractionDigits = 1;
